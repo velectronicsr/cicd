@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CI/CD Demo</title>
+    <style>
+        body { 
+            font-family: 'Courier New', monospace; 
+            background-color: #f4f4f4; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .status {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #0070f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 CI/CD Pipeline v2.0</h1>
+        <p>If you see this, the Linting passed!</p>
+        <div id="status" class="status">Waiting for action...</div>
+        <button onclick="updateStatus()">Deploy Status</button>
+    </div>
+
+    <script>
+        function updateStatus() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerText = "System Operational | Built by GitHub Actions";
+        }
+    </script>
+</body>
+</html>
